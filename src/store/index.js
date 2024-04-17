@@ -2,7 +2,7 @@
 import { createStore } from 'vuex';
 
 const BASE_URL = 'https://corniehealth.pythonanywhere.com';
-const candidateId = import.meta.env.VITE_CANDIDATE_ID
+const candidateId = 'C0XotdG3SvP2aji'
 const store = createStore({
   state: {
     users: [],
