@@ -23,8 +23,7 @@ const users = computed(() => store.state.users?.data);
 
 
 const totalPayableAmount = computed(() => {
-  let filteredDataArray;
-  //  = Object.values(users?.value);
+  let filteredDataArray = Object.values(users?.value);
 
   return filteredDataArray?.reduce((cumulative, item) => {
     if (item.paymentStatus == "unpaid" || item.paymentStatus == "overdue") {

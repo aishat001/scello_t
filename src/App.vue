@@ -26,11 +26,11 @@ const filteredData = computed(() => {
   } else {
     return users.value?.filter(item => {
       if (selectedTab.value === 2) {
-        return item.paidStatus === "paid";
+        return item.paymentStatus === "paid";
       } else if (selectedTab.value === 3) {
-        return item.paidStatus === "unpaid";
+        return item.paymentStatus === "unpaid";
       } else if (selectedTab.value === 4) {
-        return item.paidStatus === "overdue";
+        return item.paymentStatus === "overdue";
       }
     });
   }

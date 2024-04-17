@@ -20,6 +20,8 @@ const deleteUser = () => {
 };
 
 const toggleStatus = () => {
+  
+
 };
 
 const viewDetails = () => {
@@ -33,8 +35,8 @@ const viewDetails = () => {
         <button @click="toggleMenu"  class="dropdown rotate-[90deg] !text-[20px] font-[800] text-[#8B83BA]">...</button>
 
         <div v-if="isOpen" class="menu border  rounded-lg flex flex-col text-start absolute w-[154px] bg-white p-3 right-0 z-[50]" @click.outside="closeDropdown">
-          <div @click="deleteUser" class="">Edit</div>
-          <div @click="deleteUser" class="">View Profile</div>
+          <div  class="">Edit</div>
+          <div  class="">View Profile</div>
           <div @click="toggleStatus" class="text-[#007F00]">{{ item.userStatus === 'active' ? 'Deactivate' : 'Activate User' }}</div>
           <div @click="deleteUser" class="text-[#D30000]">Delete</div>
         </div>

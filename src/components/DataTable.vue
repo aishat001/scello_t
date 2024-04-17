@@ -175,22 +175,24 @@ console.log(selectedRow.value)
 
 
                     <tr :class="{ 'bg-[#F4F2FF]': rowId == item.id }" class="border-b">
-                        <td>
+                        <td class="flex items-center">
                             <label class="custom-checkbox">
                                 <input type="checkbox" :checked="isSelected(item)" @change="toggleRowSelection(item)" />
                                 <span class="checkmark"></span>
                                 <slot></slot>
                               </label>
-                        </td>
-                        <td @click="toggleRow(item.id)">
 
-                            <div v-if="rowId === item.id" class="dropdown-icon w-[15px] h-[15px] ml-10 cursor-pointer">
-                                <img src="/arrowup.svg" alt="">
-                            </div>
-                            <div v-else class="dropdown-icon w-[15px] h-[15px] ml-10 cursor-pointer ">
-                                <img src="/arrowup.svg" alt="" class="rotate-[-180deg]">
+                              <div @click="toggleRow(item.id)">
+
+                                <div v-if="rowId === item.id" class="dropdown-icon w-[15px] h-[15px] ml-10 cursor-pointer">
+                                    <img src="/arrowup.svg" alt="">
+                                </div>
+                                <div v-else class="dropdown-icon w-[15px] h-[15px] ml-10 cursor-pointer ">
+                                    <img src="/arrowup.svg" alt="" class="rotate-[-180deg]">
+                                </div>
                             </div>
                         </td>
+                      
                         <td @click="toggleRow(item.id)">
                             <p class="text-[#25213B] font-[500]">{{ item?.firstName }} {{ item?.lastName }}</p>
                             <p class="font-[400] text-[#6E6893]">{{ item?.email }}</p>
