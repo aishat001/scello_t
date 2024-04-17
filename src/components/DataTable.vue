@@ -174,7 +174,7 @@ console.log(selectedRow.value)
                 <template v-for="item in paginatedData" :key="item.id">
 
 
-                    <tr :class="{ 'bg-[#F4F2FF]': rowId == item.id }" class="border-b">
+                    <tr :class="{ 'border-l border-l-[#6D5BD0] bg-[#F4F2FF]': rowId == item.id }" class="border-b ">
                         <td class="flex items-center">
                             <label class="custom-checkbox">
                                 <input type="checkbox" :checked="isSelected(item)" @change="toggleRowSelection(item)" />
