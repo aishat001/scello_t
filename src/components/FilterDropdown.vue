@@ -28,7 +28,7 @@ import {  ref } from 'vue';
                               <span class="ml-2">Filter</span>
             </div>
 
-            <div v-if="isFilterOpen" class="absolute border mt-[50px] p-[20px] border border-[#C6C2DE] rounded-[6px] bg-white w-[224px]">
+            <div v-if="isFilterOpen" class="absolute border mt-[50px] p-[20px] border border-[#C6C2DE] rounded-[6px] bg-white w-[224px] z-50">
                 <p class="text-[#6E6893] text-[12px] mb-[10px]"> SORT BY:</p>
                
                 <div class="flex flex-col gap-[10px]">
@@ -92,4 +92,3 @@ input[type="radio"] {
   }
 </style>
 
-i think the prolem is my rdio is not checking

@@ -141,7 +141,7 @@ console.log(selectedRow.value)
 </script>
 
 <template>
-    <div class="wrapper border  pt-[20px] min-h-[500px] flex flex-col">
+    <div class="wrapper border  pt-[20px] min-h-[500px] flex flex-col bg-white">
         <div class="flex gap-[20px] px-[20px] mb-[15px]">
             <FilterDropdown @filter="handleFilter" @getSortValue="handleSort" />
 
