@@ -23,16 +23,21 @@ const users = computed(() => store.state.users?.data);
 
 
 const totalPayableAmount = computed(() => {
-  let filteredDataArray = Object.values(users?.value);
+  if (users.value !== null && users.value !== undefined) {
+    const filteredDataArray = Object.values(users.value);
 
-  return filteredDataArray?.reduce((cumulative, item) => {
-    if (item.paymentStatus == "unpaid" || item.paymentStatus == "overdue") {
-      return cumulative + item.amountInCents;
-    } else {
-      return cumulative;
-    }
-  }, 0);
+    return filteredDataArray.reduce((cumulative, item) => {
+      if (item.paymentStatus === "unpaid" || item.paymentStatus === "overdue") {
+        return cumulative + item.amountInCents;
+      } else {
+        return cumulative;
+      }
+    }, 0);
+  } else {
+    return 0; // or any default value you prefer
+  }
 });
+
 
 const emit = defineEmits(['selectTab'])
 
