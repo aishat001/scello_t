@@ -2,7 +2,6 @@
 import {  ref } from 'vue';
 
     const isFilterOpen = ref(false)
-    const filterValue = ref(null)
     const emit = defineEmits(['filter', 'getSortValue'])
     const toggleFilter = () => {
         isFilterOpen.value = !isFilterOpen.value

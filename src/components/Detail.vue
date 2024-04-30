@@ -1,35 +1,8 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue';
 
 
 const { item, expandRow } = defineProps(['item', 'expandRow']);
 
-
-const deleteUser = () => {
-  // Implement delete user functionality here
-};
-
-const toggleStatus = () => {
-  // Implement toggle status functionality here
-};
-
-const viewDetails = () => {
-  // Implement view details functionality here
-};
-
-// const handleClickOutside = (event) => {
-//   if (!event.target.closest('.dropdown')) {
-//     closeDropdown();
-//   }
-// };
-
-// onMounted(() => {
-//   document.addEventListener('click', handleClickOutside);
-// });
-
-// onUnmounted(() => {
-//   document.removeEventListener('click', handleClickOutside);
-// });
 
 </script>
 
